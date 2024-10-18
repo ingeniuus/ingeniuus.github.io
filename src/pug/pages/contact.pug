@@ -1,0 +1,85 @@
+extends ../layouts/default.pug
+
+block config
+
+    //- Global Page Configuration
+    - var pageTitle = 'Contact'
+
+block content
+
+    //- * * * * * * * *
+    //- * * Navbar  * *
+    //- * * * * * * * *
+
+    include mixins/navbar.pug
+    +navbar({
+        navbarBg: 'bg-transparent',
+        navbarStyle: 'navbar-dark',
+        navbarBrandColor: 'text-white',
+        navbarBtnColor: 'btn-teal',
+        navbarContainer: 'container px-5',
+        navbarPosition: 'fixed-top'
+    })
+
+    //- * * * * * * * * * *
+    //- * * Page Header * *
+    //- * * * * * * * * * *
+
+    include mixins/header.pug
+    +header({
+        pageHeaderBg: 'bg-gradient-primary-to-secondary',
+        pageHeaderStyle: 'page-header-ui-dark',
+        svgBorderAngled: false,
+        svgBorderRounded: true,
+        svgBorderWaves: false,
+        svgBorderFill: 'text-light'
+    })
+
+        .page-header-ui-content.pt-10
+            .container.px-5.text-center
+                .row.gx-5.justify-content-center
+                    .col-lg-8
+                        h1.page-header-ui-title.mb-3 Contact us
+                        p.page-header-ui-text Have questions? We're here to help!
+
+    //- * * * * * * * * * * *
+    //- * * Text Section  * *
+    //- * * * * * * * * * * *
+
+    include mixins/section.pug
+    +section({
+        sectionBg: 'bg-light',
+        sectionPadding: 'py-10',
+        svgBorderAngled: false,
+        svgBorderRounded: true,
+        svgBorderWaves: false,
+        svgBorderFill: 'text-dark'
+    })
+
+    
+            //- Contact Details Section
+            .row.gx-5.justify-content-center.text-center
+                .col-lg-5.mb-5.mb-lg-0
+                    h5 Location
+                    p.fw-light.mb-0 Utilities Software Limited
+                    p BECO Building, Barclays Eagle Labs
+                    p 58 Kingston Street
+                    p Glasgow, G5 8BP
+                .col-lg-5.mb-5.mb-lg-0
+                    h5 Email
+                    p.fw-light.mb-0
+                        | Email us at 
+                        a(href='mailto:hello@utilitiessoftware.co.uk') hello@utilitiessoftware.co.uk
+                .col-lg-5
+                    h5 Call
+                    p.fw-light.mb-0
+                        | Call us at 
+                        a(href='tel:+447779991921') 0777 999 1921
+
+block footer
+
+    include mixins/footer.pug
+    +footer({
+        footerBg: 'bg-dark',
+        footerStyle: 'footer-dark'
+    })

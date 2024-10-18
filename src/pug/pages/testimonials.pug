@@ -1,0 +1,124 @@
+extends ../layouts/default.pug
+
+block config
+
+    //- Global Page Configuration
+    - var pageTitle = 'Testimonials'
+
+block content
+
+    //- * * * * * * * *
+    //- * * Navbar  * *
+    //- * * * * * * * *
+
+    include mixins/navbar.pug
+    +navbar({
+        navbarBg: 'bg-transparent',
+        navbarStyle: 'navbar-dark',
+        navbarBrandColor: 'text-white',
+        navbarBtnColor: 'btn-teal',
+        navbarContainer: 'container px-5',
+        navbarPosition: 'fixed-top'
+    })
+
+    //- * * * * * * * * * *
+    //- * * Page Header * *
+    //- * * * * * * * * * *
+
+    include mixins/header.pug
+    +header({
+        pageHeaderBg: 'bg-gradient-primary-to-secondary',
+        pageHeaderStyle: 'page-header-ui-dark',
+        svgBorderAngled: false,
+        svgBorderRounded: true,
+        svgBorderWaves: false,
+        svgBorderFill: 'text-light'
+    })
+
+        .page-header-ui-content.pt-10
+            .container.px-5.text-center
+                .row.gx-5.justify-content-center
+                    .col-lg-8
+                        h1.page-header-ui-title.mb-3 Testimonials
+                        p.page-header-ui-text.mb-0 Our reputation is built on the quality of our work and the relationships we build with our customers. That most of our work comes from referrals speaks for itself.
+
+    //- * * * * * * * * *
+    //- * * Testimonials Section * *
+    //- * * * * * * * * *
+
+    include mixins/section.pug
+    +section({
+        sectionBg: 'bg-light',
+        sectionPadding: 'py-10',
+        svgBorderAngled: false,
+        svgBorderRounded: false,
+        svgBorderWaves: false,
+        svgBorderFill: ''
+    })
+
+        .container.px-5
+            .row.gx-5.justify-content-center
+
+                //- First Testimonial
+                .col-lg-10.mb-5
+                    .card.h-100.shadow.border-0
+                        .card-body.p-5
+                            p.lead “When it came time to upgrade our eLearning platform we struggled to find an out-of-the-box solution that met the requirements of our 80,000 existing members. In the end, we decided to take the brave step and build our own LCMS (Learning Content Management System).
+                            br
+                            p.lead To successfully deliver the product we needed a partner with a strong background in Content Management Systems, User Interface design and mobile delivery – the team at USL had these qualities in abundance.
+                            br
+                            p.lead Working with USL was an absolute pleasure, they helped guide and refine our decision-making process and ensured that we collectively delivered a first-class product. The powerful backend functionality, elegant design, and simplistic end-user experience has surpassed our expectations.
+                            br
+                            p.lead The new site gives our users access to 1000’s of hours of learning material, and now with just a few clicks, learning directors & lab managers can curate customized learning paths for their analytical teams.
+                            br
+                            p.lead Our partnership with USL has helped us create a product that we are hugely proud of!”
+                            br
+                            h5 Denis O’Hara
+                            p Digital Solutions Manager, Crawford Scientific Ltd.
+
+                //- Second Testimonial
+                .col-lg-10.mb-5
+                    .card.h-100.shadow.border-0
+                        .card-body.p-5
+                            p.lead “USL is a brilliant partner for Candidate.ID. The team have worked closely with our teams in the UK and India on our application, supporting the design, code review, deployment and hosting effectively. They work well proactively, suggesting improvements to design, code, architecture and deployment methods and react well when needed at short notice.”
+                            br
+                            h5 Billy McDiarmid
+                            p Product and Success Director, Candidate.ID
+
+                //- Third Testimonial
+                .col-lg-10.mb-5
+                    .card.h-100.shadow.border-0
+                        .card-body.p-5
+                            p.lead “Owens testimonial to go here …… Owens testimonial to go here …… Owens testimonial to go here …… Owens testimonial to go here …… Owens testimonial to go here …… Owens testimonial to go here …… Owens testimonial to go here …… Owens testimonial to go here …… Owens testimonial to go here …… Owens testimonial to go here …… Owens testimonial to go here …… Owens testimonial to go here ……”
+                            br
+                            h5 Owen Thomas
+                            p Project Manager Community Benefits, CGI UK Limited
+
+    //- * * * * * * * * * * * * * * * *
+    //- * * Contact Button Section  * *
+    //- * * * * * * * * * * * * * * * *
+
+    include mixins/section.pug
+    +section({
+        sectionBg: 'bg-white',
+        sectionPadding: 'py-10',
+        svgBorderAngled: false,
+        svgBorderRounded: true,
+        svgBorderWaves: false,
+        svgBorderFill: 'text-dark'
+    })
+
+        .container.px-5
+            .row.gx-5.justify-content-center
+                .col-xl-6.col-lg-8.col-md-10.text-center.py-5
+                    h2 Ready to get Started?
+                    p.lead.text-gray-500.mb-5 We'd love to hear from you about your branding and digital needs. We are currently accepting new clients.
+                    a(href='contact.html').btn.btn-primary.fw-500 Contact us
+
+block footer
+
+    include mixins/footer.pug
+    +footer({
+        footerBg: 'bg-dark',
+        footerStyle: 'footer-dark'
+    })

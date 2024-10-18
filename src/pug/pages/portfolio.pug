@@ -1,0 +1,115 @@
+extends ../layouts/default.pug
+
+block config
+
+    //- Global Page Configuration
+    - var pageTitle = 'Portfolio'
+
+block content
+
+    //- * * * * * * * *
+    //- * * Navbar  * *
+    //- * * * * * * * *
+
+    include mixins/navbar.pug
+    +navbar({
+        navbarBg: 'bg-transparent',
+        navbarStyle: 'navbar-dark',
+        navbarBrandColor: 'text-white',
+        navbarBtnColor: 'btn-teal',
+        navbarContainer: 'container px-5',
+        navbarPosition: 'fixed-top'
+    })
+
+    //- * * * * * * * * * *
+    //- * * Page Header * *
+    //- * * * * * * * * * *
+
+    include mixins/header.pug
+    +header({
+        pageHeaderBg: 'bg-gradient-primary-to-secondary',
+        pageHeaderStyle: 'page-header-ui-dark',
+        svgBorderAngled: false,
+        svgBorderRounded: true,
+        svgBorderWaves: false,
+        svgBorderFill: 'text-white'
+    })
+
+        .page-header-ui-content.position-relative
+            .container.px-5.text-center
+                .row.gx-5.justify-content-center
+                    .col-lg-8
+                        h1.page-header-ui-title.mb-3 Our work
+                        p.page-header-ui-text.mb-0 A showcase of projects we've worked on in the past year
+
+    //- * * * * * * * * *
+    //- * * Portfolio * *
+    //- * * * * * * * * *
+
+   
+    include mixins/section.pug
+    +section({
+        sectionBg: 'bg-light',
+        sectionPadding: 'py-10',
+        svgBorderAngled: false,
+        svgBorderRounded: false,
+        svgBorderWaves: false,
+        svgBorderFill: ''
+    })
+
+        .container.px-5
+            .row.gx-5
+
+                
+                .col-lg-6.mb-5
+                    .card.h-100
+                        .card-body
+                            h5 Crawford Scientific Ltd – ChromAcademy
+                            p Crawford Scientific engaged USL to develop a Learning Content Management and eLearning Platform for their community of 80,000 chromatographers worldwide. USL kicked this off with a Requirements Capture and User Definition Workshop to define the user types and their needs. Then we produced an outline specification, project plan and iteration plan which we refined with the customer to achieve timescales and price. The project was delivered in early 2020 – www.chromacademy.com
+               
+                .col-lg-6.mb-5
+                    .card.h-100
+                        .card-body
+                            h5 CGI / Glasgow City Council / Glasgow Life – Charles Rennie Mackintosh 150th Anniversary App
+                            p CGI work under contract with Glasgow City Council to deliver IT services and projects. USL were commissioned by CGI as part of their Community Beneﬁts Programme for Glasgow City Council / Glasgow Life to develop a mobile App which would utilise Bluetooth iBeacons to alert the user via their mobile device when they were in the vicinity of a Mackintosh attraction. USL developed the app and a back-office content management platform to enable Glasgow Life staff to add, remove and edit the content without having to republish the app. USL also conﬁgured, tested and calibrated the iBeacons and integrated them with the App. See more at - https://glasgow.gov.uk/goglasgow
+           
+                .col-lg-6.mb-5
+                    .card.h-100
+                        .card-body
+                            h5 Candidate ID
+                            p USL provided Candidate.ID with expertise to move their product to a secure hosting environment on Microsoft's Azure Cloud. Also provided technical guidance on cloud architecture and roadmap.
+
+           
+                .col-lg-6.mb-5
+                    .card.h-100
+                        .card-body
+                            h5 USL Software and Technology Audit
+                            p USL developed a Software and Technology Audit service to fill the gap in due diligence for investors, highlighting issues such as security, compliance, and scalability.
+    //- * * * * * * * * * * * * * * * *
+    //- * * Contact Button Section  * *
+    //- * * * * * * * * * * * * * * * *
+
+    include mixins/section.pug
+    +section({
+        sectionBg: 'bg-white',
+        sectionPadding: 'py-10',
+        svgBorderAngled: false,
+        svgBorderRounded: true,
+        svgBorderWaves: false,
+        svgBorderFill: 'text-dark'
+    })
+
+        .container.px-5
+            .row.gx-5.justify-content-center
+                .col-xl-6.col-lg-8.col-md-10.text-center.py-5
+                    h2 Ready to get Started?
+                    p.lead.text-gray-500.mb-5 We'd love to hear from you about your branding and digital needs. We are currently accepting new clients.
+                    a(href='contact.html').btn.btn-primary.fw-500 Contact us
+
+block footer
+
+    include mixins/footer.pug
+    +footer({
+        footerBg: 'bg-dark',
+        footerStyle: 'footer-dark'
+    })

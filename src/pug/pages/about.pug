@@ -1,0 +1,121 @@
+extends ../layouts/default.pug
+
+block config
+    //- Global Page Configuration
+    - var pageTitle = 'About Us'
+
+block content
+    //- * * * * * * * *
+    //- * * Navbar  * *
+    //- * * * * * * * *
+
+    include mixins/navbar.pug
+    +navbar({
+        navbarBg: 'bg-transparent',
+        navbarStyle: 'navbar-dark',
+        navbarBrandColor: 'text-white',
+        navbarBtnColor: 'btn-teal',
+        navbarContainer: 'container px-5',
+        navbarPosition: 'fixed-top'
+    })
+
+    //- * * * * * * * * * *
+    //- * * Page Header * *
+    //- * * * * * * * * * *
+
+    include mixins/header.pug
+    +header({
+        pageHeaderBg: 'bg-gradient-primary-to-secondary',
+        pageHeaderStyle: 'page-header-ui-dark',
+        svgBorderAngled: false,
+        svgBorderRounded: true,
+        svgBorderWaves: false,
+        svgBorderFill: 'text-white'
+    })
+
+        .page-header-ui-content.py-5.position-relative
+            .container.px-5
+                .row.gx-5.justify-content-center
+                    .col-xl-8.col-lg-10.text-center
+                        div(data-aos='fade-up')
+                            h1.page-header-ui-title About Us
+                            p.page-header-ui-text Learn more about USL and our approach.
+    //- * * * * * * * * * * *
+    //- * * Text Section  * *
+    //- * * * * * * * * * * *
+
+    include mixins/section.pug
+    +section({
+        sectionBg: 'bg-white',
+        sectionPadding: 'py-10',
+        svgBorderAngled: false,
+        svgBorderRounded: true,
+        svgBorderWaves: false,
+        svgBorderFill: 'text-dark'
+    })
+
+        .container.px-5
+            .row.gx-5.justify-content-center
+                .col-lg-10
+                    h2.text-center Skilled Software Developers
+                    p USL are a software company skilled in the development of intuitive software systems and the creation of interfaces to these systems. We combine the best user interface design with robust and secure technology. We deploy these solutions to the Cloud and provide associated technical services.
+
+                    ul
+                        li
+                            h4 Intuitive User Interfaces
+                            p Our team has over twenty years’ experience of delivering the best in User Interface and User Experience Design. Starting with a Requirements Capture, User Definition, and Discovery Workshop, we work closely with you to ensure we are building the best solution for your Users' needs.
+                        li
+                            h4 Software ‘Best-fit’ Solution
+                            p We will work with you to provide the best software and technology solution for your project. We have a 100% track record of delivering software that works, on time and on budget.
+                        li
+                            h4 Robust, Secure and Scalable Technology
+                            p We use Microsoft Azure Cloud as our ‘go-to’ hosting solution. It is quick to set up, scalable, reliable, and secure. However, we can accommodate your existing hosting solution or work with your preferred supplier.
+
+                    hr.my-5
+
+                    //- Six Blocks with full text
+                    .row.gx-5.justify-content-center
+                        .col-md-6.mb-4
+                            h4 Discover
+                            p Meeting you face to face and making sure we are a good fit for each other and can work together. This is the essential foundation of a successful project.
+                        .col-md-6.mb-4
+                            h4 Define
+                            p Through Requirements Capture, User Definition and Discovery Workshops we drill into the detail of the project. Who are the Users? What do they require? How do they require it?
+                            p We come back to you with an outline specification for comment and to ensure we understand your requirements.
+                        .col-md-6.mb-4
+                            h4 Design
+                            p In advance of an iteration, our User Experience Designer will produce interactive designs, sharing these with you, the client, for feedback. This ensures that the software developers know exactly what they will be creating and the client has a clear understanding of what the software will do.
+                        .col-md-6.mb-4
+                            h4 Develop
+                            p USL use an iterative Agile approach to planning and delivering your project. So, in addition to the Specification, the Statement of Work will let you see the project tasks that make up each two-week development phase (Sprint). This also ensures that you have visibility into progress as the project evolves.
+                        .col-md-6.mb-4
+                            h4 Testing
+                            p We test each piece of work as the project progresses. We find any bugs and fix them.
+                            p We also carry out ongoing User Acceptance Testing (UAT) on the user journeys to ensure the software is intuitive and robust. If we find any issues, we iterate and improve.
+                        .col-md-6.mb-4
+                            h4 Deploy and Launch
+                            p Once you have a fully functioning, tested piece of software that we are both happy to launch, we will initiate a soft launch pressure test to ensure the hosting platform can cope with potential user volumes.
+
+                    hr.my-5
+
+                    //- Four Bullets (Unit Tests etc.)
+                    ul
+                        li
+                            h4 Unit Tests
+                            p Developers test their own code with Unit Tests. These are automated and added to our build process.
+                        li
+                            h4 Integration Tests
+                            p Developers write Integration Tests to test the process end-to-end for new components. These are added to our release process.
+                        li
+                            h4 Regression Tests
+                            p Regression Tests are formed from the previous Integration Tests and are run to ensure that new code hasn’t affected previous functionality.
+                        li
+                            h4 Automation
+                            p Automation helps us ensure that software builds, releases, and tests are all repeatable and easy to do. This is called Continuous Delivery.
+
+block footer
+    include mixins/footer.pug
+    +footer({
+        footerBg: 'bg-dark',
+        footerStyle: 'footer-dark'
+    })

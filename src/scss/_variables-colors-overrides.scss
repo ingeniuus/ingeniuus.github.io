@@ -1,0 +1,34 @@
+// 
+// Color overrides
+// 
+
+// This file is intentionally blank
+// Use this file to override any color variables within the project
+
+// You can also replace this file with a file exported from the customizer, 
+// which you can access from the widget at https://themes.startbootstrap.com/sb-ui-kit-pro/
+
+// * * * * * * * *
+// * * Example * *
+// * * * * * * * *
+
+// Uncomment below and rebuild the SCSS to see color changes in effect
+
+// $primary: $orange;
+// $secondary: $pink;
+
+$green300:#083F35;
+$green200:#0A735B;
+$green100:#0EA683;
+$neutralDark: #031B17;
+$neutralLight:#F9F2EC;
+$blue300:#153C5C;
+
+$primary: $green300;
+$secondary: $green200;
+$success: $green100;
+$info: $blue300;
+$warning: $yellow;
+$danger: $red;
+$dark: $neutralDark;
+$light: $neutralLight;

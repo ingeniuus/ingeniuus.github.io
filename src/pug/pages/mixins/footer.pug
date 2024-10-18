@@ -1,0 +1,43 @@
+mixin footer(options)
+
+    footer.footer.pt-10.pb-5.mt-auto(class=options.footerBg, class=options.footerStyle)
+
+        if block
+            block
+        else
+            .container.px-5
+                .row.gx-5
+                    .col-lg-3
+                        .footer-brand
+                            | Utilities Software Limited
+                        .mb-3 Building Brighter Tomorrows
+                        .icon-list-social.mb-5
+                            a.icon-list-social-link(href='#!')
+                                i.fab.fa-github
+                            
+
+                    .col-lg-9
+                        .row.gx-5
+                            .col-lg-3.col-md-6.mb-5.mb-lg-0
+                                .text-uppercase-expanded.text-xs.mb-4 Pages
+                                ul.list-unstyled.mb-0
+                                    li.mb-2
+                                        a(href='index.html') Home
+                                    li.mb-2
+                                        a(href='about.html') About Us
+                                    li.mb-2
+                                        a(href='services.html') Services
+                                    li.mb-2
+                                        a(href='testimonials.html') Testimonials
+                                    li.mb-2
+                                        a(href='portfolio.html') Portfolio
+                                    li.mb-2 
+                                        a(href='contact.html') Contact Us
+                           
+                hr.my-5
+
+                .row.gx-5.align-items-center
+
+                    .col-md-6.small
+                        | Copyright &copy; Utilties Software Limited 2024
+                    

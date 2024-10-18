@@ -1,0 +1,96 @@
+extends ../layouts/default.pug
+
+block config
+
+    //- Global Page Configuration
+    - var pageTitle = 'Services'
+
+block content
+
+    //- * * * * * * * *
+    //- * * Navbar  * *
+    //- * * * * * * * *
+
+    include mixins/navbar.pug
+    +navbar({
+        navbarBg: 'bg-transparent',
+        navbarStyle: 'navbar-dark',
+        navbarBrandColor: 'text-white',
+        navbarBtnColor: 'btn-teal',
+        navbarContainer: 'container px-5',
+        navbarPosition: 'fixed-top'
+    })
+
+    //- * * * * * * * * * *
+    //- * * Page Header * *
+    //- * * * * * * * * * *
+
+    include mixins/header.pug
+    +header({
+        pageHeaderBg: 'bg-gradient-primary-to-secondary',
+        pageHeaderStyle: 'page-header-ui-dark',
+        svgBorderAngled: false,
+        svgBorderRounded: true,
+        svgBorderWaves: false,
+        svgBorderFill: 'text-light'
+    })
+
+        .page-header-ui-content.pt-10
+            .container.px-5.text-center
+                .row.gx-5.justify-content-center
+                    .col-lg-8
+                        h1.page-header-ui-title.mb-3 Services
+                        p.page-header-ui-text USL provides a number of services around the development and delivery of software.
+
+    //- * * * * * * * * * * * * *
+    //- * * Services Section * *
+    //- * * * * * * * * * * * * *
+
+    include mixins/section.pug
+    +section({
+        sectionBg: 'bg-light',
+        sectionPadding: 'py-10',
+        svgBorderAngled: false,
+        svgBorderRounded: false,
+        svgBorderWaves: false,
+        svgBorderFill: ''
+    })
+
+        .container.px-5
+            .row.gx-5
+
+                //- First Service Box
+                .col-lg-6.mb-5
+                    .card.h-100
+                        .card-body
+                            h5 Software Development
+                            p USL has a range of expertise and experience to take on software development projects. These include bespoke document and workflow management systems, content-managed offline-capable mobile apps, and fully-featured Learning Content Management Systems (LCMS).
+
+                //- Second Service Box
+                .col-lg-6.mb-5
+                    .card.h-100
+                        .card-body
+                            h5 Hosting and Technical Services
+                            p USL delivers the full range of services available in the Microsoft Azure Cloud Hosting platform, ensuring scalability and cost-efficiency. We also provide services for domain names and URL routing.
+
+                //- Third Service Box
+                .col-lg-6.mb-5
+                    .card.h-100
+                        .card-body
+                            h5 Consultancy
+                            p USL can facilitate Requirements Capture and User Definition Workshops for your team. Whether for new product features, changes in workflow, or new systems, we deliver an outline specification and an Iteration Plan.
+
+                //- Fourth Service Box
+                .col-lg-6.mb-5
+                    .card.h-100
+                        .card-body
+                            h5 Audit
+                            p USL offers a Software and Technology Audit service to assess vulnerabilities. This service is particularly beneficial for investors, venture capitalists, and businesses looking for due diligence in their software systems.
+
+block footer
+
+    include mixins/footer.pug
+    +footer({
+        footerBg: 'bg-dark',
+        footerStyle: 'footer-dark'
+    })
