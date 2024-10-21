@@ -17,18 +17,28 @@ block config
 //- Define the main `block content` from the layout
 block content
 
-    //- * * * * * * * *
-    //- * * Navbar  * *
-    //- * * * * * * * *
-
     include mixins/navbar.pug
     +navbar({
         navbarBg: 'bg-transparent',
-        navbarStyle: 'navbar-light',
-        navbarBrandColor: 'text-primary',
-        navbarBtnColor: 'btn-primary',
+        navbarStyle: 'navbar-dark',
+        navbarBrandColor: 'text-white',
+        navbarBtnColor: 'btn-teal',
         navbarContainer: 'container px-5',
         navbarPosition: 'fixed-top'
+    })
+
+    //- * * * * * * * * * *
+    //- * * Page Header * *
+    //- * * * * * * * * * *
+
+    include mixins/header.pug
+    +header({
+        pageHeaderBg: 'bg-gradient-primary-to-secondary',
+        pageHeaderStyle: 'page-header-ui-dark',
+        svgBorderAngled: false,
+        svgBorderRounded: true,
+        svgBorderWaves: false,
+        svgBorderFill: 'text-white'
     })
 
     //- * * * * * * * * * * *
