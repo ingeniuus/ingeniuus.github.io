@@ -19,7 +19,7 @@ block content
 
     include mixins/navbar.pug
     +navbar({
-        navbarBg: 'bg-transparent',
+        navbarBg: 'bg-dark',
         navbarStyle: 'navbar-dark',
         navbarBrandColor: 'text-white',
         navbarBtnColor: 'btn-teal',
@@ -27,19 +27,7 @@ block content
         navbarPosition: 'fixed-top'
     })
 
-    //- * * * * * * * * * *
-    //- * * Page Header * *
-    //- * * * * * * * * * *
 
-    include mixins/header.pug
-    +header({
-        pageHeaderBg: 'bg-gradient-primary-to-secondary',
-        pageHeaderStyle: 'page-header-ui-dark',
-        svgBorderAngled: false,
-        svgBorderRounded: true,
-        svgBorderWaves: false,
-        svgBorderFill: 'text-white'
-    })
 
     //- * * * * * * * * * * *
     //- * * Page Content  * *
